@@ -1,15 +1,14 @@
 import streamlit as st
 
-
-
-
 st.title("Test 1")
 st.subheader("Lets Input Data")
 # st.date_input()
 
-
 import pandas as pd
 from io import StringIO
+
+def csv_reader()
+
 
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
