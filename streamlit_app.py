@@ -28,5 +28,12 @@ if uploaded_file is not None:
     # # Can be used wherever a "file-like" object is accepted:
     # dataframe = pd.read_csv(uploaded_file)
     # st.write(dataframe)
-    st.write(uploaded_file.name.split('.')[1])
+    # st.write(uploaded_file.name.split('.')[1])
     # st.write(type(uploaded_file.name))
+    if(uploaded_file.name.split('.')[1]=='csv'):
+        dataframe = pd.read_csv(uploaded_file)
+        st.write(dataframe)
+        st.write(uploaded_file)
+    if(uploaded_file.name.split('.')[1]=='text'):
+        stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
+        st.write(stringio)
