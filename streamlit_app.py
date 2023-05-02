@@ -35,5 +35,5 @@ if uploaded_file is not None:
         st.write(dataframe)
         st.write(uploaded_file)
     if(uploaded_file.name.split('.')[1]=='txt'):
-        stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
-        st.write(stringio)
+        bytes_data = uploaded_file.getvalue()
+        st.write(bytes_data)
