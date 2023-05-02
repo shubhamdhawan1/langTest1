@@ -34,6 +34,6 @@ if uploaded_file is not None:
         dataframe = pd.read_csv(uploaded_file)
         st.write(dataframe)
         st.write(uploaded_file)
-    if(uploaded_file.name.split('.')[1]=='text'):
+    if(uploaded_file.name.split('.')[1]=='txt'):
         stringio = StringIO(uploaded_file.getvalue().decode("utf-8"))
         st.write(stringio)
