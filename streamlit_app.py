@@ -7,7 +7,9 @@ st.subheader("Lets Input Data")
 import pandas as pd
 from io import StringIO
 
-def csv_reader()
+def csv_reader(file):
+    dataframe = pd.read_csv(file)
+    st.write(dataframe)
 
 
 uploaded_file = st.file_uploader("Choose a file")
@@ -32,7 +34,6 @@ if uploaded_file is not None:
     if(uploaded_file.name.split('.')[1]=='csv'):
         dataframe = pd.read_csv(uploaded_file)
         st.write(dataframe)
-        st.write(uploaded_file)
     if(uploaded_file.name.split('.')[1]=='txt'):
         bytes_data = uploaded_file.getvalue()
         st.write(bytes_data)
