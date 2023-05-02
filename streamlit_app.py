@@ -28,5 +28,5 @@ if uploaded_file is not None:
     # # Can be used wherever a "file-like" object is accepted:
     # dataframe = pd.read_csv(uploaded_file)
     # st.write(dataframe)
-    st.write(uploaded_file.name)
-    st.write(type(uploaded_file.name))
+    st.write(uploaded_file.name.split('.')[1])
+    # st.write(type(uploaded_file.name))
