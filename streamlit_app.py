@@ -7,7 +7,7 @@ st.subheader("Lets Input Data")
 import csv
 import pandas as pd
 from io import StringIO
-from langchain.document_loaders.csv_loader import CSVLoader
+# from langchain.document_loaders.csv_loader import CSVLoader
 
 def csv_reader(file):
     dataframe = pd.read_csv(file)
@@ -44,3 +44,7 @@ if uploaded_file is not None:
     if(uploaded_file.name.split('.')[1]=='txt'):
         bytes_data = uploaded_file.getvalue()
         st.write(bytes_data)
+
+
+
+st.write("By Shubham Dhawan")
