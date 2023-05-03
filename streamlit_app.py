@@ -7,7 +7,7 @@ st.subheader("Lets Input Data")
 import csv
 import pandas as pd
 from io import StringIO
-import langchain
+# import langchain
 from langchain.document_loaders.csv_loader import CSVLoader
 
 def csv_reader(file):
